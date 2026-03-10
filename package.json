@@ -2,9 +2,9 @@
   "name": "pi-mock-server",
   "version": "1.0.0",
   "description": "Mock backend para simular PI desde Salesforce",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node src/server.js"
   },
   "engines": {
     "node": ">=18"
