@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 
 const requestLogger = require("./middleware/requestLogger");
 const healthRoutes = require("./routes/healthRoutes");
@@ -9,7 +10,9 @@ const requestRoutes = require("./routes/requestRoutes");
 const app = express();
 
 app.use(express.json({ limit: "2mb" }));
+app.use(express.static(path.join(__dirname, "../public")));
 app.use(requestLogger);
+
 
 app.use("/", healthRoutes);
 app.use("/", tokenRoutes);
